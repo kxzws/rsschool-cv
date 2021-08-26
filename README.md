@@ -1,1 +1,1 @@
-# rsschool-cv
+https://kxzws.github.io/rsschool-cv/cv
