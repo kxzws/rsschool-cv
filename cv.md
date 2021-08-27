@@ -9,7 +9,22 @@
 ## Skills
 
 ## Code example
-
+```javascript
+function persistence(num) {
+  let count = 0, compNum = 1;
+  while (num > 9) {
+    while (num !== 0) {
+      compNum *= num % 10;
+      num = (num - (num % 10)) / 10;
+    }
+    num = compNum;
+    compNum = 1;
+    count++;
+  }
+  
+  return count;
+}
+```
 ## Education
 
 ## Languages
