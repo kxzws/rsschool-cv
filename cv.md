@@ -28,3 +28,5 @@ function persistence(num) {
 ## Education
 
 ## Languages
+- __Russian__ - native
+- __English__ - intermediate/advanced (according to the online test at [https://www.efset.org](https://www.efset.org/quick-check))
