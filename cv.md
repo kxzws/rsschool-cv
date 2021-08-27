@@ -36,7 +36,14 @@ function persistence(num) {
 }
 ```
 ## Education
-
+- __University__:
+  - Belarusian State University of Informatics and Radioelectronics, Information Technologies in Automated Systems
+- __Courses__:
+  - [CS50](https://www.youtube.com/playlist?list=PLawfWYMUziZqyUL5QDLVbe3j5BKWj42E5) youtube lectures (in proccess..)
+  - [Stepik](https://stepik.org/course/38218/syllabus?auth=login)
+  - [Glo Academy](https://glo-academy.org/)
+  - [HTML Academy](https://htmlacademy.ru/)
+  - [Codecademy](https://www.codecademy.com/)
 ## Languages
 - __Russian__ - native
 - __English__ - intermediate/advanced (according to the online test at [https://www.efset.org](https://www.efset.org/quick-check))
