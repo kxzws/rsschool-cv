@@ -110,6 +110,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -129,10 +133,48 @@ body {
   box-shadow: 10px 10px 40px -1px rgb(0 0 0 / 23%);
 }
 
-.line-top {
-  height: 4px;
+/*header start*/
+.header {
+  padding: 14px 26px;
+  font-family: 'Montserrat', sans-serif;
   background-color: #fd7900;
 }
+/*nav start*/
+.nav {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav__icon {
+  margin-right: 12px;
+  height: 24px;
+  width: 24px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  margin-right: 8px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__item-link {
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__item-link:hover {
+  color: #424242;
+}
+/*nav end*/
+/*header end*/
 
 .container-grid {
   margin: 30px;
@@ -219,6 +261,10 @@ body {
 .course__link {
   color: #424242;
   text-decoration: none;
+}
+
+.course__link:hover {
+  opacity: .75;
 }
 /*courses end*/
 /*code-example start*/
@@ -329,6 +375,10 @@ body {
   color: #424242;
   text-decoration: none;
 }
+
+.contacts__link:hover {
+  opacity: .75;
+}
 /*contacts end*/
 
 /*skills start*/
@@ -400,6 +450,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
   background-color: #fd7900;
 }
 
@@ -417,11 +468,15 @@ body {
 }
 
 .footer__text {
-  font-weight: bold;
+  font-weight: 600;
+}
+
+.footer__text:hover {
+  color: #424242;
 }
 
 .footer__date {
-  font-weight: bold;
+  font-weight: 600;
   color: #000;
 }
 

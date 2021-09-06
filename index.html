@@ -1,3 +1,18 @@
+<!-- 
+1. вёрстка адаптивная: ни на одном из разрешений экрана до 320px
+включительно не появляется горизонтальная полоса прокрутки,
+при этом всё содержание страницы сохраняется
+
+2. есть меню. Ссылки в пунктах меню ведут на основные разделы CV.
+Реализована плавная прокрутка при клике по ссылкам меню.
+При уменьшении ширины экрана меню становится адаптивным.
+
+3. Для подсветки кода может использоваться js-библиотека, например, highlight.js
+
+4. CV содержит изображения-ссылки на выполненные вами проекты.
+При клике по изображению страница проекта открывается в новой вкладке
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,10 +22,33 @@
     <title>CV</title>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="styles/img/page-icon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="container">
-      <div class="line-top"></div>
+      <header class="header">
+        <nav class="nav">
+          <a href="#" class="nav__icon-link"
+            ><img
+              src="styles/img/house.svg"
+              alt="icon: main page"
+              class="nav__icon"
+          /></a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__item-link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#education" class="nav__item-link">Education</a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__item-link">Portfolio</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- /.header -->
+
       <div class="container-grid">
         <aside class="add-info">
           <figure class="add-info__container-avatar">
@@ -129,10 +167,11 @@
           </section>
           <!-- /.languages -->
         </aside>
+        <!-- /.add-info -->
 
         <main class="content">
           <div class="line-between"></div>
-          <section class="about-me">
+          <section id="about" class="about-me">
             <h2 class="about-me__title dotted-headline">About me</h2>
             <p class="about-me__subtitle">
               I would like to participate in projects, which will allow me to
@@ -144,7 +183,7 @@
           <!-- /.about-me -->
 
           <div class="line-between"></div>
-          <section class="education">
+          <section id="education" class="education">
             <h2 class="education__title dotted-headline">Education</h2>
             <h4 class="education__org-name">
               Belarusian State University of Informatics and Radioelectronics
@@ -197,7 +236,7 @@
           <!-- /.courses -->
 
           <div class="line-between"></div>
-          <section class="code-example">
+          <section id="portfolio" class="code-example">
             <h2 class="code-example__title dotted-headline">Code example</h2>
             <p class="code-example__subtitle">
               <i>kata</i> from
@@ -237,7 +276,11 @@
 
       <footer class="footer">
         <a href="https://github.com/kxzws" class="footer__link">
-          <img src="styles/img/github.svg" alt="logo: github" class="footer__icon" />
+          <img
+            src="styles/img/github.svg"
+            alt="logo: github"
+            class="footer__icon"
+          />
           <p class="footer__text">me on GitHub</p>
         </a>
         <time class="footer__date" datetime="2021-08-31">© 2021</time>
