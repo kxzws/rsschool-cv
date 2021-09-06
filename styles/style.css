@@ -286,6 +286,25 @@ body {
   background-color: #e7e7e7;
 }
 /*code-example end*/
+/*projects start*/
+.projects {
+  margin-bottom: 16px;
+}
+
+.projects__item {
+  margin-bottom: 20px;
+}
+
+.projects__item-img {
+  width: 65%;
+  box-shadow: 10px 10px 10px -1px rgb(0 0 0 / 20%);
+  transition: all .5s ease-out;
+}
+
+.projects__item-img:hover {
+  transform: scale(1.05);
+}
+/*projects end*/
 /*content end*/
 
 /*add-info start*/
@@ -380,7 +399,6 @@ body {
   opacity: .75;
 }
 /*contacts end*/
-
 /*skills start*/
 .skills {
   margin-bottom: 32px;
