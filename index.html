@@ -4,11 +4,6 @@
 при этом всё содержание страницы сохраняется
 
 2. При уменьшении ширины экрана меню становится адаптивным.
-
-3. Для подсветки кода может использоваться js-библиотека, например, highlight.js
-
-4. CV содержит изображения-ссылки на выполненные вами проекты.
-При клике по изображению страница проекта открывается в новой вкладке
 -->
 
 <!DOCTYPE html>
@@ -21,6 +16,12 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="icon" href="styles/img/page-icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="script/styles/stackoverflow-light.min.css" />
+    <link rel="preload" href="script/highlight.min.js" as="script" />
+    <script src="script/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </head>
   <body>
     <div class="container">
@@ -247,23 +248,21 @@
               the number of times you must multiply the digits in num until you
               reach a single digit.
             </p>
-            <pre class="code-example__code">
-            <code>
-            function persistence(num) {
-                let count = 0, compNum = 1;
-                while (num > 9) {
-                    while (num !== 0) {
-                        compNum *= num % 10;
-                        num = (num - (num % 10)) / 10;
-                    }
-                    num = compNum;
-                    compNum = 1;
-                    count++;
-                }   
-                return count;
-            }
-            </code>
-            </pre>
+            <pre><code class="language-javascript">
+              function persistence(num) {
+                  let count = 0, compNum = 1;
+                  while (num > 9) {
+                      while (num !== 0) {
+                          compNum *= num % 10;
+                          num = (num - (num % 10)) / 10;
+                      }
+                      num = compNum;
+                      compNum = 1;
+                      count++;
+                  }   
+                  return count;
+              }
+            </code></pre>
           </section>
           <!-- /.code-example -->
           <div class="line-between"></div>
