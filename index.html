@@ -7,10 +7,39 @@
     <title>CV</title>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="styles/img/page-icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="script/styles/stackoverflow-light.min.css" />
+    <link rel="preload" href="script/highlight.min.js" as="script" />
+    <script src="script/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </head>
   <body>
     <div class="container">
-      <div class="line-top"></div>
+      <header class="header">
+        <nav class="nav">
+          <a href="#" class="nav__icon-link"
+            ><img
+              src="styles/img/house.svg"
+              alt="icon: main page"
+              class="nav__icon"
+          /></a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__item-link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#education" class="nav__item-link">Education</a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__item-link">Portfolio</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- /.header -->
+
       <div class="container-grid">
         <aside class="add-info">
           <figure class="add-info__container-avatar">
@@ -129,10 +158,11 @@
           </section>
           <!-- /.languages -->
         </aside>
+        <!-- /.add-info -->
 
         <main class="content">
           <div class="line-between"></div>
-          <section class="about-me">
+          <section id="about" class="about-me">
             <h2 class="about-me__title dotted-headline">About me</h2>
             <p class="about-me__subtitle">
               I would like to participate in projects, which will allow me to
@@ -144,7 +174,7 @@
           <!-- /.about-me -->
 
           <div class="line-between"></div>
-          <section class="education">
+          <section id="education" class="education">
             <h2 class="education__title dotted-headline">Education</h2>
             <h4 class="education__org-name">
               Belarusian State University of Informatics and Radioelectronics
@@ -197,7 +227,7 @@
           <!-- /.courses -->
 
           <div class="line-between"></div>
-          <section class="code-example">
+          <section id="portfolio" class="code-example">
             <h2 class="code-example__title dotted-headline">Code example</h2>
             <p class="code-example__subtitle">
               <i>kata</i> from
@@ -210,25 +240,63 @@
               the number of times you must multiply the digits in num until you
               reach a single digit.
             </p>
-            <pre class="code-example__code">
-            <code>
-            function persistence(num) {
-                let count = 0, compNum = 1;
-                while (num > 9) {
-                    while (num !== 0) {
-                        compNum *= num % 10;
-                        num = (num - (num % 10)) / 10;
-                    }
-                    num = compNum;
-                    compNum = 1;
-                    count++;
-                }   
-                return count;
-            }
-            </code>
-            </pre>
+            <pre><code class="language-javascript">
+              function persistence(num) {
+                  let count = 0, compNum = 1;
+                  while (num > 9) {
+                      while (num !== 0) {
+                          compNum *= num % 10;
+                          num = (num - (num % 10)) / 10;
+                      }
+                      num = compNum;
+                      compNum = 1;
+                      count++;
+                  }   
+                  return count;
+              }
+            </code></pre>
           </section>
           <!-- /.code-example -->
+          <div class="line-between"></div>
+
+          <section class="projects">
+            <h2 class="projects__title dotted-headline">Projects</h2>
+            <ul class="projects__list">
+              <li class="projects__item">
+                <h3 class="projects__item-name">SCANDI</h3>
+                <a
+                  href="https://kxzws.github.io/SCANDI/"
+                  class="projects__item-link"
+                  target="_blank"
+                  ><img
+                    src="styles/img/scandi.jpg"
+                    alt="screenshot: SCANDI"
+                    class="projects__item-img"
+                /></a>
+                <p class="projects__item-descr">
+                  Unique interior designs creating and bringing them into life.
+                </p>
+              </li>
+              <li class="projects__item">
+                <h3 class="projects__item-name">FindYourJob</h3>
+                <a
+                  href="https://kxzws.github.io/hh-site/"
+                  class="projects__item-link"
+                  target="_blank"
+                  ><img
+                    src="styles/img/hh.jpg"
+                    alt="screenshot: hh.ru"
+                    class="projects__item-img"
+                /></a>
+                <p class="projects__item-descr">Find your dream job by one click.</p>
+                <h4 class="projects__tech-title">Technologies list:</h4>
+                <ul class="projects__tech-list">
+                  <li class="projects__tech-item">Bootstrap</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <!-- /.projects -->
           <div class="line-between"></div>
         </main>
         <!-- /.content -->
@@ -237,7 +305,11 @@
 
       <footer class="footer">
         <a href="https://github.com/kxzws" class="footer__link">
-          <img src="styles/img/github.svg" alt="logo: github" class="footer__icon" />
+          <img
+            src="styles/img/github.svg"
+            alt="logo: github"
+            class="footer__icon"
+          />
           <p class="footer__text">me on GitHub</p>
         </a>
         <time class="footer__date" datetime="2021-08-31">© 2021</time>
