@@ -285,13 +285,37 @@ body {
 /*projects start*/
 .projects {
   margin-bottom: 16px;
+  color: #7e7e7e;
 }
 
 .projects__item {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.projects__item-name {
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.08em;
+}
+
+.projects__item-name::before {
+  margin-right: 10px;
+  vertical-align: text-top;
+  content: "—";
+}
+
+.projects__item-name::after {
+  margin-left: 10px;
+  vertical-align: text-top;
+  content: "—";
 }
 
 .projects__item-img {
+  margin-bottom: 13px;
   width: 65%;
   box-shadow: 10px 10px 10px -1px rgb(0 0 0 / 20%);
   transition: all .5s ease-out;
@@ -299,6 +323,16 @@ body {
 
 .projects__item-img:hover {
   transform: scale(1.05);
+}
+
+.projects__item-descr {
+  margin-bottom: 7px;
+}
+
+.projects__tech-item::before {
+  margin-right: 10px;
+  vertical-align: text-top;
+  content: "—";
 }
 /*projects end*/
 /*content end*/
